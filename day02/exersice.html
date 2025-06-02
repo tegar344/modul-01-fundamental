@@ -1,0 +1,19 @@
+<script>
+  // INPUT
+  const totalHari = parseInt(prompt("Masukkan jumlah hari"), 10);
+
+  if (isNaN(totalHari)) {
+    alert("Input tidak valid! Masukkan angka.");
+  } else {
+    // PROCESS
+    const tahun = Math.floor(totalHari / 365);
+    const sisaHari = totalHari % 365;
+    const bulan = Math.floor(sisaHari / 30);
+    const hari = sisaHari % 30;
+
+    // OUTPUT
+    const result = ${tahun} tahun, ${bulan} bulan, ${hari} hari;
+    alert(result);
+    console.log(result);
+  }
+</script>

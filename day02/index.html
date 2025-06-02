@@ -1,0 +1,43 @@
+<script>
+    //prompt () : untuk menerima input dari user
+    const name = prompt("masukan nama anda");
+
+    console.log(nama);
+
+    // alert() : menampilkan data melaui pop-up browser
+   //  alert(nama);
+
+   const angkaA = prompt("masukan angka pertama")
+   const angkaB = prompt("masukan angka kedua")
+
+   // PROCES 
+   const result = perseInt (angkaA) + perseInt (angkaB);
+
+   //OUTPUT
+   alert(`${angkaA} + ${angkaB} = $ {result}`);
+
+   // Exarcise : buat aplikasi yang bisa mendektesi suatu data email atau bukan
+   /*
+   example 1
+    input : edo@gmail.com
+    output : edo@gmail.com adalah EMAIL
+
+
+    example 2
+    input : edo@gmail.com
+    output : edomail bukan EMAIL
+
+    example 3
+     input : edomail
+     output : edomail bukan EMAIL
+     */
+
+    const email = prompt ("masukan email")
+   let hasil;
+ //PROCESS
+ if(Email.includes("@") && Email.includes (".com")) {
+    alert(email+"Adalah email")
+   }else{
+      alert(Email+"Bukan email")
+   }
+   </script>
