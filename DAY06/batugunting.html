@@ -1,0 +1,73 @@
+<script>
+
+// menyiapkan data tampilan untuk game kita
+
+const aturan = [
+    ["Gunting","Batu","Kertas"], 
+    ["Batu","Kertas","Gunting"], 
+    ["Kertas","Gunting","Batu"]];
+// pilihan, kalah sama apa, menang dengan apa.
+
+let isPlay = true;
+
+let skor = [0, 0, 0];
+
+
+const welcome = prompt("Welcome to suit game!!\n Masukkan namamu sebagai player");
+
+function ngok(pilihan, cpu){
+
+    const seri = aturan[pilihan][0] == aturan[cpu][0];
+    const menang = aturan [pilihan][2] == aturan[cpu][0];
+    const kalah = aturan [pilihan][1] == aturan [cpu][0];
+    
+    if (seri){
+
+        alert (`Pilihan Player ${welcome} = ${aturan[pilihan][0]}. Pilihan bot = ${aturan[cpu][0]}, dan hasilnya SERI/DRAW.`);
+        skor[2] += 1;
+
+    } else if (menang){
+
+        alert (`Pilihan Player ${welcome} = ${aturan[pilihan][0]}. Pilihan bot = ${aturan[cpu][0]}, dan hasilnya player ${welcome} MENANG/WIN.`);
+        skor[0] += 1;
+
+    } else if (kalah){
+
+        alert (`Pilihan Player ${welcome} = ${aturan[pilihan][0]}. Pilihan bot = ${aturan[cpu][0]}, dan hasilnya player ${welcome} KALAH/LOSE`);
+        skor[1] += 1;
+        
+    }
+}
+
+
+do{
+
+    const gamenya = prompt (`Player ${welcome}, silahkan pilih:
+    1. Gunting
+    2. Batu
+    3. Kertas
+    Pilih 1 cepet.`) 
+
+    const pilihan = Math.abs(Math.floor(gamenya) - 1);
+    const cpu = Math.abs((Math.floor(Math.random() * 3)));
+
+    ngok(pilihan, cpu);
+
+    alert (`Skor player ${welcome} sementara:
+    WIN/MENANG: ${skor[0]}
+    KALAH/LOSE: ${skor[1]}
+    SERI/DRAW : ${skor[2]}`);
+
+    isPlay = confirm(`Kalo exit game noob. Ulang apa ga?`);
+
+    if (isPlay = false){
+
+    } alert (`Skor player ${welcome}:
+    WIN/MENANG: ${skor[0]}
+    KALAH/LOSE: ${skor[1]}
+    SERI/DRAW : ${skor[2]}`);
+
+}while(isPlay);
+
+
+</script>

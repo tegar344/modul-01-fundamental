@@ -1,11 +1,72 @@
 <script>
 const database = [
-    ["kaos", 35000,12]
-    
+    ["kaos", 35000,12],
+    ["jaket", 2000,14],
+    ["celana", 5000,25]
 ]
 
+function lihatData(){
+    //1. Menyiapkan penampungan output tampilan data
+    let daftar = "=== Daftar Data ===\n";
+    for(let index=0; index < database.length; index++) {
+    //2. Mengakses didalam array satu persatu
+    const Value = database[index];
+    //3. Menambahkan tiap data kedalam variable output
+    daftar += `${index + 1}. ${Value}\n`;
+    }
+//4. Menampilkan data ouput
+alert(daftar);
+}
 
+function tambahData () {
+// 1. Menerima input data baru
+const nama = prompt("Masukkan nama data baru");
+//2. Menambahkan data diakhir
+database.push(nama)
+//3. Menambahkan data kedalam database
+alert (`penambahan data ${nama} berhasil`);
 
+}
+function perbaruiData(){
+lihatData()
+//1.perbarui data baru
+const number = prompt("Masukan data yang di perbarui")
+//2.masukin data baru
+const baru = prompt("masukan data baru")
+//3.menabhkan data baru ke base
+database.splice(number -1, 1, baru)
+alert(`sudah diperbarui`)
+}
 
+function hapusData(){
+lihatData()
+//1.pilih nomer yang dihapus
+const number = prompt("pilih yang mau dihapus")
+database.splice(number -1, 1)
+alert(`berhasil dihapus`)
+}
+
+do {
+const menu = prompt(`=== Menu Menagement Data ===
+1.Lihat data
+2.Tambah data
+3.Perbarui data
+4.Hapaus data
+5.Keluar
+
+Masukan nomor menu yang dipilih`);
+
+if ( menu === "1") {
+    lihatData(); 
+} else if (menu === "2") {
+    tambahData();
+}else if (menu === "3") {
+    perbaruiData(); 
+}else if (menu === "4"){
+    hapusData ();
+}else if(menu === "5"){
+    break;
+}
+}while (true);
 
 </script>
