@@ -1,5 +1,3 @@
-import { testModule } from ". /testFunction"
-
 // Synchronous : kode dieksekusi berdasarkan urutan perintah
 
 // console.log('Memulai proses ...')
