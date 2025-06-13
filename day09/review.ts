@@ -1,252 +1,248 @@
 /**
- * kisi kisi exam mnodul 01 :
- -Introduction programing
- -Data type (primitive, Non-primitive)
- -var, let dan const
- -Introduction Ts
- -Looping statement
- -Interface and Objeck declaration
- -function hoisting
- - encapsulation
- -data structure
- -Big O Notation
+ * Kisi-kisi exam modul 01 :
+- Introduction programming 
+- Data type (Primitive, Non-primitive)
+- var, let dan const
+- Introduction TS
+- Looping statement
+- Interface and Object declaration
+- function hoisting
+- Encapsulation
+- Data structure
+- Big O Notation
  */
 
- // Variable : penampung data
+// Variable : penampung data
 
- /**
-  * Rumus penulisan variable ==> keywordVariable = value;
-  * keywordVariable : var, let, const
-  * namaVariable : -Tidak boleh diawali angka
-  *                -Boleh diawali simbol _ atau $
-  *                - jika terdiri dari satu suku kata harus digabung dengan metode camelcase
-  */
+/**
+ * Rumus penulisan variable ==> keywordVariable namaVariable = value;
+ * keywordVariable : var, let, const
+ * namaVariable : - Tidak boleh diawali dengan angka.
+ *                - Boleh diawali simbol _ atau $
+ *                - Jika terdiri dari lebih dari satu suku kata harus digabung dengan metode camelCase
+ */
 
- // Karakter keyword variable
- // keyword var : redeclare, ressign, global variable
- var nama : string = "Tegar";
- var nama: string = "Abdi";
+// Karakter keyword variable
+// Keyword var : redeclare, reassign, global variable
+// Redeclare
+var nama: string = "Abdi";
+var nama: string = "Edo";
 
+// Reassign
+nama = "Aldo";
 
- // Reassign
- nama = "Aldo"
+// Keyword let : non-redeclare, reassign, block-scoped variable
+// Non-redeclare
+let usia: number = 20;
+// let usia: number = 15;
 
- // keyword let : non-redeclare, reassign, block-scoped variable
- //non-redeclare
- let usia: number = 20;
- //let usia: number = 15;
+// reassign
+usia = 40;
 
- //reassign
- usia = 40;
-
- //Contoh block-scoped variable
-
- function introduce() {
-    let usia: number = 15;
-    return `Usiaku ${usia}`
- }
-
- // keyword const : Non-redeclare, non-reassign, constant variable
- const PI = Math.PI;
- const listAngka: number[] = [2, 3, 4, 5, 2, 6, 3, 4];
- interface IHuman{
-    nama: string,
-    tglLahir: string,
-    gender: "Pria"|"Wanita";
- }
- const human: IHuman = {
-    nama: "Tegar",
-    tglLahir: "2000-12-03",
-    gender: "Pria",
- };
-
-
- //Looping statement : penulisan code yang ditunjukan untuk mengulang eksekusi suatu code
-
- /**
-  * WHILE LOOP : perulangan program yang akan selalu dijalankan selama kondisi masih terpenuhi
-  * Aturan penulisan :
-  * while(condition){
-  *     //code
-  * }
-  */
-
-
- let count:number=1;
-
-
- while(count < 10) {
-    console.log(`Loope ke-${count}`);
-    count++;
-    
- }
-
-
- while (true) {
-    let random: number = Math.random();
-    console.log(random);
-    if (random < 0,25) {
-        break;
-
-    }
- }
-
-
- /**
-  * DO...WHILE
-  * Aturan penulsan :
-  * do{
-  *     //code
-  * }while(condition)
-  */
-
- let counter: number = 2;
- do{
-console.log(counter);
-counter++;
- }while(counter<10)
-
-    
-
- /**
-  * FOR LOOP : digunakan ketika batas looping ditentukan sejak awal
-  * Aturan penulisan
-  * for(counterDeclaration ; counter_condition ;counter){
-  *   //code
-  * } */   
-
- for (let i: number = 1; i < 10; i++) {
-    console.log(i);
- }
-
-
-// for...in : looping yang berkaitan dengan tipe data objeck
-for (const property in human) {
-    console.log(property);
-    console.log(human[property]);
+// Contoh block-scoped variable
+function introduce() {
+  let usia: number = 15;
+  return `Usiaku ${usia}`;
 }
 
+// keyword const : Non-redeclare, Non-reassign, constant variable
+const PI = Math.PI;
+const listAngka: number[] = [2, 3, 4, 5, 2, 6, 3, 4];
+interface IHuman {
+  nama: string;
+  tglLahir: string;
+  gender: "Pria" | "Wanita";
+}
+const human: IHuman = {
+  nama: "Abdi",
+  tglLahir: "2000-12-03",
+  gender: "Pria",
+};
+
+// Looping statement :penulisan code yang ditujukan untuk mengulang eksekusi suatu code
+
+/**
+ * WHILE LOOP : perulangan program yang akan selalu dijalankan selama kondisi masih terpenuhi
+ * Aturan penulisan :
+ * while(condition){
+ *      // code
+ * }
+ */
+
+let count: number = 1;
+
+while (count < 10) {
+  console.log(`Loope ke-${count}`);
+  count++;
+}
+
+while (true) {
+  let random: number = Math.random();
+  console.log(random);
+  if (random < 0.25) {
+    break;
+  }
+}
+
+/**
+ * DO...WHILE
+ * Aturan penulisan :
+ * do{
+ *      // code
+ * }while(condition)
+ */
+
+let counter: number = 1;
+do {
+  console.log(counter);
+  counter++;
+} while (counter < 10);
+
+/**
+ * FOR LOOP : digunakan ketika batas looping ditentukan sejak awal
+ * Aturan penulisan :
+ * for(counterDeclaration ; counter_condition ; counter){
+ *      code
+ * }
+ */
+
+for (let i: number = 1; i < 10; i++) {
+  console.log(i);
+}
+
+// for...in : looping yang berkaitan dengan tipe data object
+for (const property in human) {
+  console.log(property);
+  console.log(human[property]);
+}
 
 console.log(human.nama);
-console.log(human["nama"])
+console.log(human["nama"]);
 
-//for...of : looping yang berhubungan dengan akses velue data array
-const listProduct: string[] = ["topi", "baju", "kaos", "bahan"]
+// for...of : looping yang berhubungan dengan akses value data array
+const listProduct: string[] = ["Kopi", "Teh", "Es Jeruk"];
 for (const value of listProduct) {
-    console.log(value);
+  console.log(value);
 }
 
-
-//Array : tipe data yang mampu menampung berbagai macam tipe data lain
+// Array : tipe data yang mampu menampung berbagai macam tipe data lain
 /**
- * CIRI - CIRI : - data yang disimpan kedalam array akan dibungkus kurung siku, contoh : [1, 2, 3]
- *               - setiap data yang disimpan didalam array, akan memiliki alamat index yang dimulai dan
- * 
- * 
+ * Ciri-ciri : - Data yang disimpan kedalam array akan dibungkus kurung siku, contoh : [1, 2, 3]
+ *             - Setiap data yang disimpan didalam array, akan memiliki alamat index yang dimulai dari 0.
+ *
  */
 
-
-const listNamaSiswa: string[] = ["tegar", " Abdi"];
+const listNamaSiswa: string[] = ["Aldo", "Aldi"];
 
 interface ISiswa {
-    nama: string;
-    kelas: "IPA" | "IPS" 
-
+  nis: string;
+  nama: string;
+  kelas: "IPA" | "IPS";
 }
 
 const listSiswa: ISiswa[] = [
-    {
-        nis: "0987654321",
-        nama: "tegar",
-        kelas:"IPA",
-    },
-    {
-        nis: "1234567890",
-        nama: "Abdi",
-        kelas:"IPS",
-    },
+  {
+    nis: "021837123",
+    nama: "Aldo",
+    kelas: "IPA",
+  },
+  {
+    nis: "34857348",
+    nama: "Aldi",
+    kelas: "IPS",
+  },
 ];
 
 console.log(`${listSiswa[0]}`);
 
-//JSON
-const stringObjeck = `${JSON.stringify(listSiswa[0])}`
-console.log(typeof stringObjeck);
-console.log(stringObjeck);
-console.log(JSON.parse(stringObjeck));
+// JSON
+const stringObject = `${JSON.stringify(listSiswa[0])}`;
+console.log(typeof stringObject);
+console.log(stringObject);
+console.log(JSON.parse(stringObject));
 
-//function : cara untuk menyatukan sekumpulan program yang ditujukan untuk menyelesaikan tugas khusus
+// Function : cara untuk menyatukan sekumpulan program yang ditujukan untuk menyelesaikan tugas khusus
 /**
- * Aturan penerapan :
- * - function harus tersedia lebih dulu
- * -penamaan function mengikuti auturan penamaan variable
- * - secara opsional menerima parameter/argumen : penampung data dari function untuk menerima 
- data dari luar function
- * - function secara opsional bisa menghasilkan output melalui keyword return didalamnya
- * - opsi penulisan function ada tiga : Declarative func, func. Expression dan Arrow function
- * 
+ * Kategori : Built-in function dan User-defined function
+ * Aturan penerapan function :
+ * - Function harus tersedia lebih dulu
+ * - Penamaan function mengikuti aturan penamaan variable
+ * - Secara opsional bisa menerima parameter/argumen : penampung data dari function untuk menerima data dari luar function
+ * - Function secara opsional bisa menghasilkan output melalui keyword return didalamnya
+ * - Opsi penulisan function ada tiga : Declarative func, Func. Expression dan Arrow Function
  */
 
- /**
-  * Declarative function
-  * function namaFunc( namam1?, param2?....) {
-  *   //code 
-  * }
-  */
-
+/**
+ * Declarative function :
+ * function namaFunc(param1?, param2?,...){
+ *      // code
+ * }
+ */
 console.log(penjumlahan());
 
- function penjumlahan(): number {
-    let angkaA: number = 2;
-    let angkaB: number = 3;
+function penjumlahan(): number {
+  let angkaA: number = 2;
+  let angkaB: number = 3;
 
-    const result: number = angkaA + angkaB;
+  const result: number = angkaA + angkaB;
 
-    return result;
- }
+  return result;
+}
 
- console.log(penjumlahan());
+// console.log(penjumlahan());
 
- function penjumlahanB(angkaA: number, angkaB: number) {
-    const result: number = angkaA - angkaB;
-    return result;
- }
+function penjumlahanB(angkaA: number, angkaB: number) {
+  const result: number = angkaA - angkaB;
+  return result;
+}
 
+console.log(penjumlahanB(2, 3));
+console.log(penjumlahanB(5, 3));
+console.log(penjumlahanB(10, 3));
 
- console.log(penjumlahanB(2,3));
- console.log(penjumlahanB(5,3));
- console.log(penjumlahanB(10,3))
+/**
+ * Function expression :
+ * const namaFunc = function(param1?, param2?,...){
+ *      // code
+ * }
+ */
 
- /**
-  * Function expression :
-* const namaFunc = function( namam1?, param2?....) = {
-*    //code
-* } 
-  */
- const pengurangan = function (angkaA: number, angkaB: number): number {
-    const result: number = angkaA + angkaB;
+// console.log(pengurangan());
+const pengurangan = function (): number {
+  let angkaA: number = 2;
+  let angkaB: number = 3;
 
-    return result;
- };
-//console.log(pengurangan());
+  const result: number = angkaA - angkaB;
 
- /**
-  * Arrow function : 
-  * const namaFunc = ( namam1?, param2?....) => {
-  *     //code
-  * }
-  */
+  return result;
+};
 
- const perkalian = () => {
-    let angkaA: number = 10;
-    let angkaB: number = 20;
+const penguranganB = function (angkaA: number, angkaB: number): number {
+  const result: number = angkaA - angkaB;
 
-    const result: number = angkaA * angkaB;
+  return result;
+};
 
-    return result;
- };
+console.log(penguranganB(4, 5));
+console.log(penguranganB(12, 5));
 
- const perkalianB = (angkaA: number, angkaB: number) => angkaA * angkaB;
+/**
+ * Arrow function :
+ * const namaFunc = (param1?, param2?,...) => {
+ *      // code
+ * }
+ */
 
- console.log(perkalianB(10, 20));
- console.log(perkalianB(15, 2));
+const perkalian = () => {
+  let angkaA: number = 10;
+  let angkaB: number = 20;
+
+  const result: number = angkaA * angkaB;
+
+  return result;
+};
+
+const perkalianB = (angkaA: number, angkaB: number) => angkaA * angkaB;
+
+console.log(perkalianB(10, 20));
+console.log(perkalianB(15, 2));

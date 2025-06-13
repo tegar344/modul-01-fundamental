@@ -1,33 +1,33 @@
-// VARIABLE ; penampung data
+// VARIABLE : penampung data
 
 /*
--rumus penulisan variable ==> keywordVariable namaVariable =data;
--keywordVariable ; var, let, const
--namavariable ;-harus diawali dengan huruf atau _atau $
-               -jika terdiri dari dua suku kata atau lebih, maka tidak boleh dipisah dengan spasi.
-data; tipe data yang ingin disimpan diantaranya string , number, boolean, undefined, array, object.
+- Rumus penulisan variable ==> keywordVariable namaVariable = data;
+- keywordVariable : var, let, const
+- namaVariable : - Harus diawali dengan huruf atau _ atau $
+                 - Jika terdiri dari dua suku kata atau lebih, maka tidak boleh dipisah dengan spasi.
+- data : tipe data yang ingin disimpan diantaranya string, number, boolean, undefined, array, object.
 */
 
-//mendeklarasikan variable 
-var namamurid;
+// Mendeklarasikan variable
+var namaMurid;
 
-//meng-inisialisasi variable 
+// Meng-inisialisasi variable
 var usiaMurid = 17;
 
-//karakter tiap keyword variable 
-//keyword var : redeclare, reassingn
-//redeclare
-var alamat = "jl. pemuda surabaya";
-var alamat = "sukolilo surabaya" // membuat ulang variable yang sudah ada
+// Karakter tiap keyword variable
+// Keyword var : redeclare, reassign
+// Redeclare
+var alamat = "Jl. pemuda Surabaya";
+var alamat = "Sukolilo Surabaya"; // membuat ulang variable yang sudah ada
 
-//reassing 
-alamat "rungkut surabaya";
+// Reassign
+alamat = "Rungkut Surabaya";
 
-//keyword let :non redeclare, reassing
-let program = "web development"
-//let program = "digital marketing"; // non-redeclare
-program = "data science"; // reassing
+// Keyword let : non-redeclare, reassign
+let program = "Web Development";
+// let program = " Digital Marketing"; // non-redeclare
+program = "Data Science"; // reassign
 
-// keyword const ; non-redeclare, non-reassing
+// Keyword const : non-redeclare, non-reassign
 const PI = 3.14;
-const urldomain = "https://google.com";
+const UrlDomain = "https://google.com";
